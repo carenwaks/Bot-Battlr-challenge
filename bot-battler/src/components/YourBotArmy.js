@@ -1,7 +1,7 @@
 import React from "react";
 
 function YourBotArmy () {
-        return <div>
+        return <div className="collection">
             <h3>Army Display</h3>
             </div>
 }

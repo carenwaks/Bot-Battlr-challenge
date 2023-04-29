@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  background-color: crimson;
+  margin: 10px solid black;
+  
+}
+
+.collection {
+  background-color: aqua;
+}
+
+button {
+  color: red;
+  size: 15px;
+}

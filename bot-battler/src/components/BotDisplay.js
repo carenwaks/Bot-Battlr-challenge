@@ -1,24 +1,22 @@
 import React from "react";
 
-function BotDisplay ({name,health,damage,armor,bot_class,catchphrase,avatar_url,created_at,updated_at}) {
-    function handleAdd () {
-        console.log("handle click");
+function BotDisplay ({id,name,health,damage,armor,bot_class,avatar_url, addBotToArmy}) {
+    function handleAdd (bot) {
+        console.log({id});
+        addBotToArmy(bot)
     }
 
-    function handleDelete () {
-        console.log("delete activated");
+    function handleDelete ({id}) {
+        console.log({id});       
     }
-    return <div className="container" >
+    return <div className="container" key={id} onClick={handleAdd}>
         <h3>{name} Display</h3>
-        <img src={avatar_url} alt={name} onClick={handleAdd}/>
-        <div>{health}</div>
-        <div>{damage}</div>
-        <div>{armor}</div>
-        <div>{bot_class}</div>
-        <div>{catchphrase}</div>
-        <div>{created_at}</div>
-        <div>{updated_at}</div>
-        <button onClick={handleDelete}>Delete</button>
+        <img src={avatar_url} alt={name} />
+        <div><h3>Health:{health}</h3></div>
+        <div><h3>Damage:{damage}</h3></div>
+        <div><h3>Armor:{armor}</h3></div>
+        <div><h3>Bot_class:{bot_class}</h3></div>
+        <button onClick={handleDelete}>X</button>
     </div>
 }
 

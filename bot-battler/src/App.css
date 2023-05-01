@@ -40,21 +40,14 @@
 .container {
   background-color: crimson;
   margin: 10px solid black;
-  padding: 5px;
-  border-radius: 2px;
-  width: 50%;
-  height:  40%;    
+    
 }
 
-.collection {
-  size: 20px;
+.collection {  
   background-color: aqua;
   margin: 10px solid black;
   padding: 5px;
-  border-radius: 2px;
-  width: 50%;
-  height:  40%;  
-  display: grid;
+  
 }
 
 button {
@@ -62,6 +55,3 @@ button {
   size: 15px;
 }
 
-collecton img {
-  size: 2px;
-}

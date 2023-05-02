@@ -37,21 +37,21 @@
   }
 }
 
-.container {
-  background-color: crimson;
-  margin: 10px solid black;
-    
-}
-
-.collection {  
-  background-color: aqua;
-  margin: 10px solid black;
-  padding: 5px;
-  
-}
-
 button {
   color: red;
   size: 15px;
 }
 
+.bot-collection {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap : 1rem;  
+}
+
+.container{
+  background-color:  rgba(205, 134, 63, 0.589);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.army-collection {
+  background-color: rgba(4, 128, 0, 0.651);
+}

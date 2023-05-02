@@ -11,7 +11,7 @@ function BotDisplay ({bot, addBotToArmy, removeBot}) {
       removeBot(bot) 
 
     }
-    return <div className="container" key={bot.id} onClick={handleAdd}>
+    return <div className="container" key={bot.id} onClick={() => handleAdd(bot)}>
         <h3>{bot.name} Display</h3>
         <img src={bot.avatar_url} alt={bot.name} />
         <div style={{display: "flex"}}>

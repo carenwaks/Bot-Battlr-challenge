@@ -7,20 +7,20 @@ function App() {
   
   const [botArmy, setBotArmy] = useState([])
   
-  // function addBotToArmy (bot) {
-  //   if(botArmy.includes(bot)) {
-  //     setBotArmy(botArmy.filter((item) => item !== bot))
-  //   } else {
-  //     setBotArmy([...botArmy,bot])
-  //   }
-  // };
-
-  function addBotToArmy(bot) {
-    if (botArmy.find((addedbot) => addedbot.id === bot.id)) {
-      return;
+  function addBotToArmy (bot) {
+    if(botArmy.includes(bot)) {
+      setBotArmy(botArmy.filter((item) => item !== bot))
+    } else {
+      setBotArmy([...botArmy,bot])
     }
-    setBotArmy([...botArmy, bot]);
-  }
+  };
+
+  // function addBotToArmy(bot) {
+  //   if (botArmy.find((addedbot) => addedbot.id === bot.id)) {
+  //     return;
+  //   }
+  //   setBotArmy([...botArmy, bot]);
+  // }
 
 
 
@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <YourBotArmy botsArmy={botArmy} releaseBot={releaseBot}/>
+      <YourBotArmy botArmy={botArmy} releaseBot={releaseBot}/>
       <BotCollection  addBotToArmy={addBotToArmy} removeBot={removeBot}/>
     </div>
   );

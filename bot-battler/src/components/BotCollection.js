@@ -7,7 +7,7 @@ function BotCollection ( {addBotToArmy,removeBot}) {
         fetch("http://localhost:3001/bots")
           .then((r) => r.json())
           .then((bots) => setBots(bots))
-      }, [bots]); 
+      }, []); 
 
     return <div className="bot-collection"  style={{display: "grid"}}>
         {bots.map(bot => {

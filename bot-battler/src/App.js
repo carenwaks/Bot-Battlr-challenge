@@ -35,7 +35,7 @@ function App() {
   }
 
   function releaseBot (bot) {
-    const newBots= bot.filter((item) => item !== bot)
+    const newBots= botArmy.filter((item) => item !== bot)
     setBotArmy(newBots)
   }
 
